@@ -1,0 +1,74 @@
+<!-- 📁 adminPedidos.html - TianguiStore Admin -->
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedidos del Sistema | TianguiStore</title>
+
+  <!-- Frameworks -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="estilo/main.css" />
+</head>
+
+<body class="grey darken-4 white-text animate__animated animate__fadeIn">
+
+  <!-- 🔝 Navbar -->
+  <header id="navbar-container" role="banner"></header>
+
+  <!-- 📦 Contenido principal -->
+  <main class="container my-4" role="main">
+    <section class="section center-align">
+      <h4 class="amber-text text-accent-3">
+        <i class="fas fa-database" aria-hidden="true"></i> Pedidos del Sistema
+      </h4>
+      <p class="grey-text text-lighten-1">Consulta y gestiona todos los pedidos realizados en la tienda.</p>
+    </section>
+
+    <!-- 🧾 Tabla responsive -->
+    <div class="card-panel grey darken-3 z-depth-2 animate__animated animate__fadeInUp">
+      <div class="responsive-table">
+        <table class="striped highlight centered white-text" aria-label="Listado completo de pedidos">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Usuario</th>
+              <th>Fecha</th>
+              <th>Estado</th>
+              <th>Total</th>
+              <th>Productos</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-admin-pedidos">
+            <!-- Cargado por adminPedidos.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- 🔍 Modal de detalle -->
+  <div id="modalDetalleProductos" class="modal modal-fixed-footer">
+    <div class="modal-content grey darken-4 white-text">
+      <h5 class="amber-text text-accent-3">
+        <i class="fas fa-boxes" aria-hidden="true"></i> Productos del Pedido
+      </h5>
+      <div id="detalle-productos-contenido" class="row"></div>
+    </div>
+    <div class="modal-footer grey darken-3">
+      <button class="modal-close waves-effect btn-flat white-text">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- 🔚 Footer -->
+  <footer id="footer-container" role="contentinfo"></footer>
+
+  <!-- 🧠 Scripts -->
+  <script src="scripts/loadComponent.js" defer></script>
+  <script src="scripts/adminPedidos.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" crossorigin="anonymous" defer></script>
+</body>
+</html>
